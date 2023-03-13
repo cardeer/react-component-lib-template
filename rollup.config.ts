@@ -18,6 +18,11 @@ const config: RollupOptions = {
     }),
     typescript({
       tsconfig: './tsconfig.json',
+      tsconfigOverride: {
+        compilerOptions: {
+          declaration: true,
+        },
+      },
     }),
     commonjs(),
     resolve(),
